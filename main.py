@@ -12,7 +12,7 @@ def main():
     y = SCREEN_HEIGHT / 2
     player = Player(x, y)
 
-    BLACK = (0,0,0,1)
+
     MAX_FPS = 60
     while True:
         for event in pygame.event.get():
@@ -20,8 +20,8 @@ def main():
                 return
             
         player.update(dt)
-        
-        screen.fill(BLACK)
+
+        screen.fill(COLOR_BLACK)
         player.draw(screen)
         pygame.display.flip()
 
