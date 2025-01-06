@@ -2,6 +2,7 @@ import pygame
 from constants import *
 from player import Player
 from asteroid import Asteroid
+from asteroidfield import AsteroidField
 
 
 def main():
@@ -21,6 +22,8 @@ def main():
     player = Player(x, y)
 
     Asteroid.containers = (asteroids, updatable, drawable)
+    AsteroidField.containers = updatable
+    asteroids_field = AsteroidField()
 
     MAX_FPS = 60
     while True:
